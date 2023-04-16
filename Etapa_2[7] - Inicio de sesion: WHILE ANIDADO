@@ -1,0 +1,52 @@
+<meta charset="UTF-8">
+<h1>Sistema de Alura: WHILE ANIDADO</h1> <!--Titulo-->
+<script>
+    let Usuario = "Usuario#421"; //variable de valor: "cadena de caracteres"
+    let contrasena = "usuario421"; //variable de valor: "cadena de caracteres"
+    let maximo = 3, contador = 1, sumador = 1; //variables de valor entero
+
+    while(contador <= maximo) //ciclo condicional WHILE: "menor o igual"
+    {
+        let inicio_Usuario = prompt("Ingrese su usuario");
+        //invocacion de ventana emergente
+        if(Usuario === inicio_Usuario) //condicion IF: "igualdad estricta"
+        {
+            while(sumador <= maximo) //ciclo condicional WHILE: "menor o igual"
+            {
+                let contrasena_Usuario = prompt("Ingrese su contraseña");
+                //invocacion de ventana emergente: "entrada de datos"
+                if(contrasena === contrasena_Usuario) //condicion IF: "igualdad estricta"
+                {
+                    alert("Bienvenido al sistema: " + inicio_Usuario);
+                    //invocacion de ventana emergente: "salida de datos"
+                    break; //interupcion de ejecucion
+                }
+                if (contrasena_Usuario == null) //condicion IF: "igualdad de convercion"
+                {
+                    alert("Vuelva pronto: "+Usuario);
+                    //invocacion de ventana emergente: "salida de datos"
+                    break; //interupcion de ejecucion
+                }
+                else
+                {
+                    alert("Contraseña incorrecta.\nintentelo de nuevo...");
+                    //invocacion de ventana emergente: "salida de datos"
+                }
+            sumador++; //valor de incremento en 1
+            }
+        break; //interupcion de ejecucion
+        }
+        if(inicio_Usuario == null) //condicion IF: "igualdad de conversion"
+        {
+            alert("Gracias por su visita");
+            //invocacion de ventana emergente: "salida de datos"
+            break; //interupcion de ejecucion
+        }
+        else //segunda condicion si la primera es FALSO
+        { 
+            alert("Usuario no encontrado.\nintentelo de nuevo...");
+            //invocacion de ventana emergente: "salida de datos"
+        }
+        contador++; //valor de incremento en 1
+    }
+</script>
