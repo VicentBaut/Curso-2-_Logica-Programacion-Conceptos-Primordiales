@@ -1,0 +1,53 @@
+<meta charset="utf-8">
+<h1>El sorteo de la loteria: IF</h1><!--Titulo-->
+<script>
+	function salto() //funcion de salto de linea
+	{
+		document.write("<br><br><br>"); //comando de escritura: 3 salto´s de linea
+	}
+	function escribe(contenido) //funcion de escritura con parametro
+	{
+		salto(); //invocacion de la funcion Salto()
+		document.write("<h2>"+contenido+"</h2>"); //comando de escritura h2 con parametro
+		document.write("<h2>Numero sorteado entre 0 - "+parametro+": "+numero_sorteado+"</h2>");
+		//comando de escritura h2 con concatenacion
+		document.write("<h2>Numero lanzado entre 0 - "+parametro+": "+lanzamiento+"</h2>");
+		//comando de escritura h2 con concatenacion
+	}
+	function escribir(texto)
+	{
+		salto(); //invocacion de la funcion Salto()
+		document.write("<h2>"+texto+"</h2>") //comando de escritura h2 con parametro
+	}
+	function sorteo(limite)
+	{
+		return Math.round(Math.random()*limite);
+	}
+	
+	let parametro = parseInt(prompt("Escriba el numero de alcance del sorteo"));
+	//invocacion de ventana emergente con conversion a valor entero
+	let lanzamiento = parseInt(prompt("Escriba su lanzamiento entre 0 - "+parametro+": "));
+	//invocacion de ventana emergente con conversion a valor entero
+	let numero_sorteado = parseInt(sorteo(parametro)); //conversion de valor aleatorio a entero
+
+	if (lanzamiento != numero_sorteado) //condicion de "diferente que"
+	{
+		escribir("Resultado...<br>No acertado al numero sorteado");
+		//invocacion de funcion de escritura
+		if (lanzamiento > numero_sorteado) //condicion de "mayor que"
+		{
+			escribe("El numero lanzado fue mayor al numero sorteado");
+			//invocacion de funcion Escribe()
+		}
+		else //segundo condicional si el primero resulta FALSO
+		{
+			escribe("El numero lanzado fue menor al numero sorteado");
+			//invocacion de funcion Escribe()
+		}
+	}
+	else //segundo condicional si el primero resulta FALSO
+	{
+		escribe("Resultado...<br>Acerto al numero sorteado");
+		//invocacion de funcion de escritura
+	}
+</script>
