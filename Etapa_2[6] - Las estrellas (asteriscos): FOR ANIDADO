@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<h1>Las estrellas: FOR ANIDADO</h1> <!--Titulo-->
+<script>
+	function salto(n) //funcion de salto de linea con parametro
+	{
+		document.write(n);	//comando de escritura con n salto's de linea
+	}  
+	function escribe(frase) //funcion de escritura con parametro
+	{
+		document.write(frase); //comando de escritura con parametro
+	}
+	for(let lineas = 1; lineas <= 5; lineas++) //ciclo condicional FOR
+	//variable de valor entero; condicion: "menor o igual"; valor de incremento en 1
+	{
+		for (let columnas = 1; columnas <= 10; columnas++) //ciclo condicional FOR anidado
+		//variable de valor entero; condicion: "menor o igual"; valor de incremento en 1
+		{
+			escribe("*"); //invocacion de funcion Escribe() con parametro
+		}
+		salto("<br>"); //invocacion de funcion Salto() con n salto's
+	}
+	salto("<br><br>"); //invocacion de funcion Salto() con n salto's
+
+	escribe("fin"); //invocacion de funcion Escribe() con parametro
+</script>
+
