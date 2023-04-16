@@ -1,0 +1,15 @@
+<meta charset="utf-8">
+<h1>Por un pelo, superman fuera: FOR & ARRAY</h1> <!--Titulo-->
+<script>
+	let heroes = ["Superman", "Thor", "Batman", "Mujer Maravilla"];
+	//variable de valor: "cadena de caracteres" tipo: array
+	function array_ciclado(parametro) //funcion del Array con parametro
+	{
+		for (let numero = 0; numero < parametro; numero++) //ciclo condicional FOR
+		//variable de valor entero; condicion de "menor que"; valor de incremento en 1
+		{
+    		alert(heroes[numero]);//invocacion de ventana emergente: "salida de datos"
+		}
+	}
+	array_ciclado(heroes.length); //invocacion de funcion Array_ciclado() con parametro
+</script>
