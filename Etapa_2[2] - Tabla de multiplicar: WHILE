@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<h1>La tabla de multiplicar: WHILE & FOR</h1> <!--Titulo-->
+<script>
+	function salto() //funcion de salto de linea
+	{
+		document.write("<br><br><br>"); //comando de escritura con 3 salto's de linea
+	}  
+	function escribe(frase) //funcion de escritura con parametro
+	{
+		document.write(frase); //comando de escritura con parametro
+		salto(); //invocacion de funcion Salto()
+	}
+	let multiplicador = 1; //valor entero
+
+	escribe("WHILE"); //invocacion de funcion Escribe()
+	while (multiplicador <= 10) //condicion de incremento WHILE
+	{
+		escribe(7 * multiplicador); //invocacion de funcion Escribe() con operacion
+		multiplicador++; //valor de incremento en 1
+	}
+	escribe("FOR"); //invocacion de funcion Escribe()
+	for (var veces = 1; veces <= 10; veces++)//condicion de incremento FOR
+		//variable de incremento; condicion de incremento; valor de incremento en 1
+	{
+		escribe(7 * multiplicador);
+		//invocacion de funcion Escribe() con parametro de operacion
+	}
+</script>
