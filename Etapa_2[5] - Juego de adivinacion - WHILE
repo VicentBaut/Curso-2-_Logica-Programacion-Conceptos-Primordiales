@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+<h1>Juego de adivinacion: WHILE</h1> <!--Titulo-->
+<script>
+	function salto() //funcion de salto de linea
+	{
+		document.write("<br><br><br>"); //comando de escritura con 3 salto's de linea
+	}  
+	function escribe(frase) //funcion de escritura con parametro
+	{
+		document.write(frase); //comando de escritura con parametro
+		salto(); //invocacion de funcion Salto()
+	}
+
+	let numeroPensado = Math.round(Math.random()*10); //seleccion aleatoria de un rango numerico
+	let intentos = 3, contador = 1; //variables de valor entero
+
+	while (contador <= intentos) //ciclo condicional WHILE: "menor o igual"
+	{
+		var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10"));
+		//invocacion de ventana emergente: "entrada de datos" con conversion a valor entero
+		if (numeroPensado === numeroLanzado) //condicion IF: "igualdad estricta"
+		{
+			alert("Acertó, intento ["+contador+"] el numero pensado era: "+ numeroPensado);
+			//invocacion de ventana emergente de concatenacion: "salida de datos"
+			break; //interupcion de ejecucion
+		}
+		else //segunda condicion si la primera es FALSO
+		{
+			alert("Erró, intentelo de nuevo");
+			//invocacion de ventana emergente: "salida de datos"
+		}
+		contador++; //valor de incremento en 1
+	}
+	if (numeroPensado === numeroLanzado) //condicion IF: "igualdad estricta"
+	{
+		escribe("usted acertó, intento ["+intento+"] el numero pensado era "+numeroPensado);
+		//invocacion de funcion Escribe() con parammetro de concatenacion
+	}
+	else //segunda condicion si la primera es FALSO
+	{
+		escribe("Erró, el numero pensado era: "+numeroPensado);
+		//invocacion de funcion Escribe() con parammetro de concatenacion
+	}
+</script>
