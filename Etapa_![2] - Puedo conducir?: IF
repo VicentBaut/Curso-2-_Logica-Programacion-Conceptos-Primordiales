@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<h1>Puedo conducir??: IF</h1> <!--Titulo-->
+<script>
+    function salto() //funcion de salto de linea
+    {
+        document.write("<br>"); //comando de escritura: salto de linea
+    }
+    function escribe(frase) //funcion de escritura con parametro
+    {
+        document.write(frase); //comando de escritura con parametro
+        salto(); //invocacion de funcion Salto()
+    }
+
+    let edad = parseInt(prompt("¿Cuál es tu edad?"));
+    //invocacion de ventana emergente y conversion a valor entero
+    let tieneLicencia = prompt("¿Tienes licencia? opciones [Si,No]:");
+    //invocacion de ventana emergente y conversion a valor entero
+    if (edad >= 18 && tieneLicencia === "Si") //doble condicional de "mayor que" e "igual que"
+    {
+        escribe("Puedes conducir."); //invocacion de funcion escribe()
+    }
+    else //segundo condicional: en caso de que el primero sea FALSO
+    {
+        escribe("No puedes conducir"); //invocacion de funcion escribe()
+    }
+</script>
