@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<h1>La media de las edades de la Familia: WHILE</h1> <!--Titulo-->
+<script>
+	function saltarLinea() //funcion de salto de linea
+	{
+		document.write("<br><br><br>");	//comando de escritura con 3 salto's de linea
+	}  
+	function escribe(frase) //funcion de escritura con parametro
+	{
+		document.write(frase); //comando de escritura con parametro
+		saltarLinea(); //invocacion de funcion Salto()
+	}
+
+	let numeroMiembros = parseInt(prompt("Ingrese la cantidad de miembros de su familia"));
+	//invocacion de ventana emergente: "entrada de datos" con conversion a valor entero
+	let contador = 1, totalEdades = 0; //variables de valor entero
+
+	while (contador <= numeroMiembros) //ciclo WHILE: "menor o igual"
+	{
+		edad = parseInt(prompt("ingrese la edad del familiar"));
+		//invocacion de ventana emergente: "entrada de datos" con conversion a valor entero
+		totalEdades = totalEdades + edad; //valor de operacion: suma
+		contador++; //valor de incremento en 1
+	}
+	mediaEdades = totalEdades/numeroMiembros; //valor de operacion: division
+
+	escribe("La media de las edades de la familia es "+mediaEdades);
+	//invocacion de funcion Escribe() con parametro de concatenacion
+
+	escribe("fin"); //invocacion de funcion Escribe() con parametro
+</script>
