@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<h1>Los ingredientes: ARRAY - WHILE & FOR</h1> <!--Titulo-->
+<script>
+  let ingredientes = [];//Array vacio
+  let cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+  //ventana emergente de "entrada de datos" con conversion a entero
+  let contador = 1; //variable de incremento en 1
+
+  while(contador <= cantidad) //ciclo condicional WHILE
+  {
+    let ingrediente = prompt("Informe el ingrediente " + contador);
+    //ventana emergente de "entrada de datos"
+    let existe = false; //variable de valor boleano: FALSO
+
+    for(let posicion = 0; posicion < ingredientes.length; posicion++)//ciclo condicional FOR
+    {
+      if(ingrediente == ingredientes[posicion]) //condicional IF
+      {
+        existe = true; //valor boleano VERDADERO
+        alert("Ya existe y es: "+ingredientes[posicion]);
+        //ventana emergente de "salida de datos"
+        break; //interupcion de ejecucion
+      }
+    }
+
+    if(existe == false) //condicional IF
+    {
+      alert("Se agregara a la lista"); //ventana emergente de "salida de datos"
+      ingredientes.push(ingrediente); //agregacion de informacion al arreglo ARRAY
+      contador++; //valor de incremento en 1
+    }
+  }
+</script>
