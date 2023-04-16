@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<h1>Año Mundial del Fifa: WHILE</h1><!--Titulo-->
+<script>
+	function salto() //funcion de salto de linea
+	{
+		document.write("<br><br><br>"); //comando de escritura con 3 salto's de linea
+	}  
+	function escribe(argument) //funcion de escritura con parametro
+	{
+		document.write(argument); //comando de escritura con parametro
+		salto(); //invocacion de funcion Salto()
+	}
+
+	let anulaMundial = 1930; //variable de valor entero
+	let limite = parseInt(prompt("Ingrese el año limite para calcular"));
+	//invocacion de ventana emergente: "entrada de datos" con conversion a valor entero
+	while (anulaMundial <= limite) //ciclo condicional WHILE: "menor o igual"
+	{
+		escribe("Hubo mundial de la FIFA en el año " + anulaMundial);
+		//invocacion de funcion Escribe() con parametro de concatenacion
+		anulaMundial += 4; //valor de suma en 4
+	}
+	escribe("fin"); //invocacion de funcion Escribe() con parametro
+</script>
