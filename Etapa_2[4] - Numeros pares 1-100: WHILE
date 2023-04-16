@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<h1>Numeros pares del 1 - 100: WHILE</h1> <!--Titulo-->
+<script>
+	function salto() //funcion de salto de linea
+	{
+		document.write("<br><br>"); //comando de escritura con 2 salto's de linea
+	}
+	function escribe(argument) //funcion de escritura con parametro
+	{
+		document.write(argument); //comando de escritura con parametro
+		salto(); //invocacion de funcion Salto()
+	}
+	let incremento = 1; //variable de valor entero
+	while(incremento<=100) //ciclo condicional WHILE: "menor o igual"
+	{
+		if(incremento%2==0) //condicion IF: "divisible y sin residuo"
+		{
+			escribe("Valor: "+incremento); //funcion Escribe() con parametro de concatenacion
+		}
+		incremento++; //valor de incremento en 1
+	}
+	escribe("Fin"); //funcion Escribe() con parametro
+</script>
